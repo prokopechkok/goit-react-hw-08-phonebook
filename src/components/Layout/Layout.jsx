@@ -1,19 +1,14 @@
-import { Loader } from 'components/Loader/Loader';
-import Navigation from 'components/Navigation/Navigation';
-import React, { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import css from './Layout.module.css';
+import { Suspense } from 'react';
+import { AppNav, Loader } from 'components';
+
 const Layout = () => {
   return (
     <div>
-      <header>
-        <Navigation />
-      </header>
-      <main className={css.main}>
-        <Suspense fallback={<Loader />}>
-          <Outlet />
-        </Suspense>
-      </main>
+      <AppNav />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

@@ -1,7 +1,9 @@
-import React from 'react';
-
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <div>
+      <h1>Welcome to contacts app</h1>
+    </div>
+  );
 };
 
 export default HomePage;
