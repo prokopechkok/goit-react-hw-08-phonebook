@@ -17,8 +17,9 @@ export const UserMenu = () => {
 
   return (
     <div className={css.wrapper}>
-      <p className={css.username}>{email}</p>
+      <p className={css.headerLink}>{email}</p>
       <button
+        className={css.button}
         type="button"
         onClick={() => dispatch(apiLogoutUser())}
         disabled={isLoading}

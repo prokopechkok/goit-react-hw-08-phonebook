@@ -1,0 +1,44 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+.inputGroup {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.label {
+  font-size: 1.2em;
+  color: #677f96;
+}
+.input,
+.button {
+  color: #677f96;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px 4px #4f9db4;
+  transition: all 0.15s ease;
+}
+.input::placeholder {
+  font-size: 1.1em;
+  color: #677f96;
+}
+.input:is(:focus, :hover),
+.button:is(:focus, :hover) {
+  outline: none;
+  transform: scale(1.1);
+}
+.button {
+  font-size: 1.1em;
+  margin-top: 10px;
+  padding: 5px 10px;
+}

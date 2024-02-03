@@ -1,16 +1,37 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.inputGroup {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .filterLabel {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 1.2em;
+  color: #677f96;
 }
 .filterInput {
-  max-width: 450px;
-  padding: 5px 10px;
-  border: 1px solid darkgrey;
-  border-radius: 5px;
-  font-size: 15px;
-  color: grey;
+  color: #677f96;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px 4px #4f9db4;
+  transition: all 0.15s ease;
+}
+.filterInput::placeholder {
+  font-size: 1.1em;
+  color: #677f96;
+}
+.filterInput:is(:focus, :hover) {
+  outline: none;
+  transform: scale(1.1);
 }

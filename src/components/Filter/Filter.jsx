@@ -13,16 +13,21 @@ export const Filter = () => {
   };
 
   return (
-    <label className={css.filterLabel}>
-      Find contacts by name
-      <input
-        className={css.filterInput}
-        type="text"
-        name="filter"
-        placeholder="Enter name"
-        value={filter}
-        onChange={handleFilterChange}
-      />
-    </label>
+    <form className={css.form}>
+      <div className={css.inputGroup}>
+        <label className={css.filterLabel}>
+          Find contacts by name
+          <input
+            className={css.filterInput}
+            type="text"
+            name="filter"
+            placeholder="Enter name"
+            value={filter}
+            onChange={handleFilterChange}
+            autoComplete="true"
+          />
+        </label>
+      </div>
+    </form>
   );
 };

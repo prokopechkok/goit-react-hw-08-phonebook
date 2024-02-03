@@ -1,29 +1,33 @@
 .contactItem {
-  display: inline-flex;
-  gap: 15px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .contactText {
   display: flex;
   gap: 10px;
-  font-size: 18px;
+  font-size: 1.2em;
+  color: #677f96;
 }
 .contactName {
   font-style: italic;
-  font-weight: 500;
+  font-weight: bold;
 }
 .contactDeleteBtn {
-  width: fit-content;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 13px;
-  cursor: pointer;
+  color: #677f96;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
   background-color: transparent;
-  border: 1px solid darkgrey;
-  color: #000;
-  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px 4px #4f9db4;
+  font-size: 1.1em;
+  max-width: fit-content;
+  transition: all 0.15s ease;
 }
 .contactDeleteBtn:is(:hover, :focus) {
-  transform: translateY(-1px);
-  box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.25);
+  outline: none;
+  transform: scale(1.1);
 }

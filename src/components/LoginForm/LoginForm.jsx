@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { apiLoginUser } from '../../redux/auth/authOperations';
+import css from './LoginForm.module.css';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -12,33 +13,45 @@ export const LoginForm = () => {
     const password = form.elements.userPassword.value;
 
     const userData = { email, password };
-    // console.log(userData);
     dispatch(apiLoginUser(userData));
     form.reset();
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Email
+    <form className={css.form} onSubmit={handleSubmit}>
+      <div className={css.inputGroup}>
+        <label className={css.label} htmlFor="userEmail">
+          Email
+        </label>
         <input
+          className={css.input}
           type="email"
           name="userEmail"
+          id="userEmail"
           placeholder="alex@abc.com"
+          autoComplete="true"
           required
         />
-      </label>
-      <label>
-        Password
+      </div>
+
+      <div className={css.inputGroup}>
+        <label className={css.label} htmlFor="userPassword">
+          Password
+        </label>
         <input
+          className={css.input}
           type="password"
           name="userPassword"
+          id="userPassword"
           placeholder="*******"
+          autoComplete="true"
           // minLength={7}
           required
         />
-      </label>
-      <button type="submit">Log In</button>
+      </div>
+      <button className={css.button} type="submit">
+        Log In
+      </button>
     </form>
   );
 };

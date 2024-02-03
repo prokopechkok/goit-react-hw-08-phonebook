@@ -3,7 +3,7 @@ import css from './AuthNav.module.css';
 
 export const AuthNav = () => {
   return (
-    <div>
+    <div className={css.navList}>
       <NavLink
         className={({ isActive }) =>
           `${css.headerLink} ${isActive ? css.active : ''}`

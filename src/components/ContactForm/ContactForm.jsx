@@ -46,32 +46,36 @@ export const ContactForm = () => {
 
   return (
     <form className={css.contactForm} onSubmit={handleFormSubmit}>
-      <label className={css.formInputLabel}>
-        Name
-        <input
-          onChange={handleChange}
-          className={css.contactInput}
-          type="text"
-          name="name"
-          placeholder="Enter name here"
-          value={name}
-          required
-          autoComplete="true"
-        />
-      </label>
-      <label className={css.formInputLabel}>
-        Number
-        <input
-          onChange={handleChange}
-          className={css.contactInput}
-          type="tel"
-          name="number"
-          placeholder="Enter phonenumber here"
-          value={number}
-          required
-          autoComplete="true"
-        />
-      </label>
+      <div className={css.inputGroup}>
+        <label className={css.formInputLabel}>
+          Name
+          <input
+            onChange={handleChange}
+            className={css.contactInput}
+            type="text"
+            name="name"
+            placeholder="Enter name"
+            value={name}
+            required
+            autoComplete="true"
+          />
+        </label>
+      </div>
+      <div className={css.inputGroup}>
+        <label className={css.formInputLabel}>
+          Number
+          <input
+            onChange={handleChange}
+            className={css.contactInput}
+            type="tel"
+            name="number"
+            placeholder="Enter phone number"
+            value={number}
+            required
+            autoComplete="true"
+          />
+        </label>
+      </div>
       <button className={css.addContactBtn} type="submit">
         Add contact
       </button>

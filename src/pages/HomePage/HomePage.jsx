@@ -1,7 +1,8 @@
+import css from './HomePage.module.css';
 const HomePage = () => {
   return (
-    <div>
-      <h1>Welcome to contacts app</h1>
+    <div className={css.container}>
+      <h1 className={css.title}>Welcome to contacts storage app</h1>
     </div>
   );
 };

@@ -16,9 +16,9 @@ const ContactsPage = () => {
 
   return (
     <div className={css.container}>
-      <h1 className={css.title}>Phonebook</h1>
+      {/* <h1 className={css.title}>Phonebook</h1> */}
       <ContactForm />
-      <h2 className={css.subtitle}>Contacts</h2>
+      {/* <h2 className={css.subtitle}>Contacts</h2> */}
       <Filter />
       {isLoading && <Loader />}
       <ContactList />

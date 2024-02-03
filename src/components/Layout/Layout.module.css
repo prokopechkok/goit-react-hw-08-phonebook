@@ -1,0 +1,14 @@
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: #e5e6ea;
+  background-image: url(../../../assets/images/top-view-blue-monday.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

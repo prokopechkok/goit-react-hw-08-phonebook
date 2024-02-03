@@ -2,39 +2,46 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 15px;
-  border: 1px solid darkgrey;
-  border-radius: 5px;
-  max-width: 450px;
+}
+.inputGroup {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .formInputLabel {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 1.2em;
+  color: #677f96;
 }
-.contactInput {
-  width: 40%;
-  padding: 5px 10px;
-  border: 1px solid darkgrey;
-  border-radius: 5px;
-  font-size: 15px;
-  color: grey;
+.contactInput,
+.addContactBtn {
+  color: #677f96;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px 4px #4f9db4;
+  transition: all 0.15s ease;
+}
+.contactInput::placeholder {
+  font-size: 1.1em;
+  color: #677f96;
+}
+.contactInput:is(:focus, :hover),
+.addContactBtn:is(:focus, :hover) {
+  outline: none;
+  transform: scale(1.1);
+  color: #677f96;
 }
 .addContactBtn {
-  width: fit-content;
+  margin-top: 10px;
   padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 15px;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid darkgrey;
-  color: #000;
-  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
-}
-.addContactBtn:is(:hover, :focus) {
-  transform: translateY(-1px);
-  box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.25);
+  font-size: 1.2em;
+  max-width: fit-content;
 }
